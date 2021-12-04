@@ -1,6 +1,33 @@
-h1 {
-    color: blue;
+*{
+    background-color: #B0E0E6;
 }
 
+h1 {
+    border: 1px solid;
+}
 
+.open_statement {
+    background-color: #FFFCA4;
+}
 
+h2, .header {
+    color: #800080;
+}
+
+.li_1 {
+    text-decoration: overline;
+    color: #800080;
+}
+
+a {
+    color: #0000FF;
+}
+
+.first_textarea {
+    border: 5px solid grey;
+    background-color: white;
+}
+
+form label input {
+    background-color: white;
+}
