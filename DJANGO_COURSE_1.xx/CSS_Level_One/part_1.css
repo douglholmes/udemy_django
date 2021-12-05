@@ -28,6 +28,31 @@ a {
     background-color: white;
 }
 
-form label input {
+.email {
+    background-color: white;
+    border: 2px solid red;
+}
+
+.password {
+    background-color: white;
+    border: 2px solid red;
+}
+
+.submit_button {
+    background-color: #EFEFEF;
+    border: 2px solid red;
+}
+
+.question_box {
+    background-color: #1500FF;
+    padding-top: 10px;
+    border: 4px dashed yellow ;
+}
+
+.question_box p {
+    background-color:  #FFFCA4;
+}
+
+.second_textarea {
     background-color: white;
 }
