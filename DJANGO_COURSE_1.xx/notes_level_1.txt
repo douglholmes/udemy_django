@@ -1,1 +1,25 @@
---12/2/21--
+--1/7/22--
+
+    - .forEach is a method to sort through each value in an array
+        ex...
+
+        var arr = ["A","B","C"]
+        
+        for (i = 0;i<arr.length;i++) {
+            console.log(arr[i]);
+        }
+        A
+        B
+        C
+                --or--
+        for (letter of arr) {
+            console.log(letter)
+        }
+        A
+        B
+        C
+                --or--
+        arr.forEach(console.log)
+        A
+        B
+        C
