@@ -1,0 +1,59 @@
+--1/7/22--
+
+    - .forEach is a method to sort through each value in an array
+        ex...
+
+        var arr = ["A","B","C"]
+        
+        for (i = 0;i<arr.length;i++) {
+            console.log(arr[i]);
+        }
+        A
+        B
+        C
+                --or--
+        for (letter of arr) {
+            console.log(letter)
+        }
+        A
+        B
+        C
+                --or--
+        arr.forEach(console.log)
+        A
+        B
+        C
+
+
+--1/12/21--
+
+D.O.M. (Document Object Model)
+
+*Important document attributes*
+
+document.URL --> returns the URL
+document.body -->return body
+document.head --> return head
+document.links --> return all the links
+
+    -grabbing elements from DOM-
+
+document.getElementById() --> return element with whatever id you pass in
+
+document.getElementByClassName() --> pass in class and return list of all items in that class
+
+document.getElementByTagName() --> pass in a tag and it will return all elements with that tag
+
+document.querySelector() --> returns first object matching the CSS style selector
+
+document.querySelectorAll() --> returns all objects matching the CSS style selector
+
+    -editing styles-
+
+To Edit Styles, we've already seen we can use the .style tag. Now if we want to edit actual html or text or attributes we can use different methods. If you want to change the text,html content, or attributes you can use the following:
+
+myvariable.textContent - This returns just the text
+myvariable.innerHTML - This returns the actual html
+myvariable.getAttribute() - This returns the original attribute
+myvariable.setAttribute() - This allowed you to set an attribute
+
