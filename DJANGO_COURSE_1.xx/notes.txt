@@ -57,3 +57,6 @@ myvariable.innerHTML - This returns the actual html
 myvariable.getAttribute() - This returns the original attribute
 myvariable.setAttribute() - This allowed you to set an attribute
 
+--1/14/21--
+
+    *JQUERY*
