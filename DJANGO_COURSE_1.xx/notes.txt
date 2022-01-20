@@ -57,6 +57,221 @@ myvariable.innerHTML - This returns the actual html
 myvariable.getAttribute() - This returns the original attribute
 myvariable.setAttribute() - This allowed you to set an attribute
 
---1/14/21--
+--1/19/21--
 
-    *JQUERY*
+PYTHON
+
+ The names you use when creating these labels need to follow a few rules:
+
+     1. Names can not start with a number.
+     2. There can be no spaces in the name, use _ instead.
+     3. Can't use any of these symbols :'",<>/?|\()!@#$%^&*~-+
+     3. It's considered best practice (PEP8) that the names are lowercase.
+
+-python supports negative indexing
+
+*SLICING*
+
+- We can use a : to perform *slicing* which grabs everything
+  up to a designated point. For example:
+
+- Grab everything past the first term all the way to the length of s which is len(s)
+s[1:]
+
+
+- Note that there is no change to the original s
+s
+
+- Grab everything UP TO the 3rd index
+s[:3]
+
+
+- Note the above slicing. Here we're telling Python to grab everything from
+- 0 up to 3. It doesn't include the 3rd index. You'll notice this a lot in
+- Python, where statements and are usually in the context of "up to, but not including".
+
+-Everything
+s[:]
+
+
+- We can also use negative indexing to go backwards.
+- Last letter (one index behind 0 so it loops back around)
+s[-1]
+
+- Grab everything but the last letter
+s[:-1]
+
+
+- We can also use index and slice notation to grab elements of a sequence by a
+- specified step size (the default is 1). For instance we can use two colons in
+- a row and then a number specifying the frequency to grab elements. For example:
+
+- Grab everything, but go in steps size of 1
+s[::1]
+
+- Grab everything, but go in step sizes of 2
+s[::2]
+
+- We can use this to print a string backwards
+s[::-1]   ******SUPER IMPORTANT******
+
+*METHODS IN STRINGS*
+
+- Here are some examples of built-in methods in strings:
+
+- Upper Case a string
+s.upper()
+
+- Lower case
+s.lower()
+
+- Split a string by blank space (this is the default)
+s.split()
+
+- Split by a specific element (doesn't include the element that was split on)
+s.split('W')
+
+*FORMATTING STRINGS*
+
+-We can use the .format() method to add formatted objects to printed string statements.
+
+ The easiest way to show this is through an example:
+
+'Insert another string with curly brackets: {}'.format('The inserted string')
+
+Using the string .format() method
+- The best way to format objects into your strings for print statements is using
+  the format method. The syntax is:
+
+  'String here {var1} then also {var2}'.format(var1='something1',var2='something2')
+
+Lets see some examples:
+
+
+print('This is a string with an {p}'.format(p='insert'))
+
+- Multiple times:
+print('One: {p}, Two: {p}, Three: {p}'.format(p='Hi!'))
+
+
+- Several Objects:
+print('Object 1: {a}, Object 2: {b}, Object 3: {c}'.format(a=1,b='two',c=12.3))
+
+
+*NESTING LISTS*
+
+#######################
+#### Nesting Lists ####
+#######################
+# A great feature of of Python data structures is that they support nesting.
+# This means we can have data structures within data structures.
+# For example: A list inside a list.
+#
+# Let's see how this works!
+
+# Let's make three lists
+lst_1=[1,2,3]
+lst_2=[4,5,6]
+lst_3=[7,8,9]
+
+# Make a list of lists to form a matrix
+matrix = [lst_1,lst_2,lst_3]
+
+# Show
+matrix
+
+
+# Now we can again use indexing to grab elements, but now there are two levels
+# for the index. The items in the matrix object, and then the items inside that list!
+
+# Grab first item in matrix object
+matrix[0]
+
+# Grab first item of the first item in the matrix object
+matrix[0][0]
+
+
+###########################
+### List Comprehensions ###
+###########################
+
+# Python has an advanced feature called list comprehensions. They allow for
+# quick construction of lists. To fully understand list comprehensions we need
+# to understand for loops. So don't worry if you don't completely understand
+# this section, and feel free to just skip it since we will return to this topic later.
+#
+# But in case you want to know now, here are a few examples!
+
+# Build a list comprehension by deconstructing a for loop within a []
+first_col = [row[0] for row in matrix]
+
+first_col
+
+
+# We used list comprehension here to grab the first element of every row in the
+# matrix object. We will cover this in much more detail later on!
+
+*DICTIONARIES*
+
+-Dictionaries do not maintain any order
+
+*TUPLES*
+
+####################
+### Immutability ###
+####################
+
+# It can't be stressed enough that tuples are immutable.
+# To drive that point home:
+
+t[0]= 'change'
+
+# Because of this immutability, tuples can't grow.
+# Once a tuple is made we can not add to it.
+
+t.append('nope')
+
+############
+### Sets ###
+############
+
+# Sets are an unordered collection of *unique* elements. We can construct them
+# by using the set() function. Let's go ahead and make a set to see how it works
+
+x = set()
+
+# We add to sets with the add() method
+x.add(1)
+
+#Show
+x
+
+
+# Note the curly brackets. This does not indicate a dictionary! Although you can
+# draw analogies as a set being a dictionary with only keys.
+#
+# We know that a set has only unique entries. So what happens when we try to add
+# something that is already in a set?
+
+# Add a different element
+x.add(2)
+
+#Show
+x
+
+# Try to add the same element
+x.add(1)
+
+#Show
+x
+
+
+# Notice how it won't place another 1 there. That's because a set is only
+# concerned with unique elements! We can cast a list with multiple repeat
+# elements to a set to get the unique elements. For example:
+
+# Create a list with repeats
+l = [1,1,2,2,3,4,5,6,1,1]
+
+# Cast as set to get unique values
+set(l)
