@@ -296,7 +296,9 @@ LEGB Rule:
 
 
 
-1/28/21
+2/18/21
 
-    *DJANGO*
--
+    *GIT/GITHUB*
+
+    1. git init
+    2. git add .
